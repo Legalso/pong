@@ -11,11 +11,11 @@ let raqueteComprimento = 10;
 let raqueteAltura = 90;
 
 //variáveis da raquete
-let xRaquete = 5;
+let xRaquete = 6;
 let yRaquete = 150;
 
 //variáveis do oponente
-let xRaqueteOponente = 585;
+let xRaqueteOponente = 588;
 let yRaqueteOponente = 150;
 let velocidadeYOponente;
 
@@ -94,7 +94,3 @@ function movimentaRaqueteOponente(){
   velocidadeYOponente = yBolinha - yRaqueteOponente - raqueteComprimento / 2 - 30;
   yRaqueteOponente += velocidadeYOponente
 }
-
-
-
-
