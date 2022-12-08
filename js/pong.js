@@ -12,6 +12,26 @@ let raio = diametro / 2 ;
 let velocidadeXBolinha = 6;
 let velocidadeYBolinha = 6;
 
+//variáveis da linha central
+let tamLinha = 15;
+let round = 2;
+let espaçamento = 26;
+let xLinha = 290;
+let yLinha0 = espaçamento * 1;
+let yLinha1 = espaçamento * 2;
+let yLinha2 = espaçamento * 3;
+let yLinha3 = espaçamento * 4;
+let yLinha4 = espaçamento * 5;
+let yLinha5 = espaçamento * 6;
+let yLinha6 = espaçamento * 7;
+let yLinha7 = espaçamento * 8;
+let yLinha8 = espaçamento * 9;
+let yLinha9 = espaçamento * 10;
+let yLinha10 = espaçamento * 11;
+let yLinha11 = espaçamento * 12;
+let yLinha12 = espaçamento * 13;
+let yLinha13 = espaçamento * 14;
+
 //variáveis da raquete
 let xRaquete = 5;
 let yRaquete = 155;
@@ -44,6 +64,7 @@ function setup() {
 
 function draw() {
   background(0);
+  mostraLinha();
   mostraBolinha();
   movimentaBolinha();
   verificaColisaoBorda();
@@ -57,6 +78,23 @@ function draw() {
   incluiPlacar();
   marcaPonto();
   bolinhaNaoFicaPresa()
+}
+
+function mostraLinha(){
+  square(xLinha, yLinha0, tamLinha, round);
+  square(xLinha, yLinha1, tamLinha, round);
+  square(xLinha, yLinha2, tamLinha, round);
+  square(xLinha, yLinha3, tamLinha, round);
+  square(xLinha, yLinha4, tamLinha, round);
+  square(xLinha, yLinha5, tamLinha, round);
+  square(xLinha, yLinha6, tamLinha, round);
+  square(xLinha, yLinha7, tamLinha, round);
+  square(xLinha, yLinha8, tamLinha, round);
+  square(xLinha, yLinha9, tamLinha, round);
+  square(xLinha, yLinha10, tamLinha, round);
+  square(xLinha, yLinha11, tamLinha, round);
+  square(xLinha, yLinha12, tamLinha, round);
+  square(xLinha, yLinha13, tamLinha, round);
 }
 
 function mostraBolinha(){
@@ -104,6 +142,7 @@ function verificaColisaoRaquete(x, y){
   if (colidiu){
     velocidadeXBolinha *= -1;
     raquetada.play();
+    calculaChanceDeErrar();
   }
 }
 
@@ -124,15 +163,11 @@ function calculaChanceDeErrar(){
 */
 
 function movimentaRaqueteOponente(){
-  velocidadeYOponente = yBolinha - yRaqueteOponente - raqueteAltura + 30 + chanceDeErrar;
-  yRaqueteOponente += velocidadeYOponente;
-  calculaChanceDeErrar();
+  yRaqueteOponente = yBolinha + raqueteAltura/4 - chanceDeErrar;
 }
 
 function calculaChanceDeErrar(){
-  if (pontosDoOponente > meusPontos + 1) {
-    chanceDeErrar = random (-54, -50)}
-  else {chanceDeErrar = 21}
+  chanceDeErrar = Math.round(Math.random()*140);
 }
 
 function incluiPlacar(){
@@ -140,7 +175,7 @@ function incluiPlacar(){
   textAlign (CENTER);
   fill (color(0, 255, 0))
   textSize (45);
-  text(meusPontos, 250, 45);
+  text(meusPontos, 240, 45);
   text(pontosDoOponente, 350, 45);
 }
 
