@@ -9,8 +9,8 @@ let diametro = 30;
 let raio = diametro / 2 ;
 
 //velocidade da bolinha
-let velocidadeXBolinha = 6;
-let velocidadeYBolinha = 6;
+let velocidadeXBolinha = 7;
+let velocidadeYBolinha = 7;
 
 //variáveis da linha central
 let tamLinha = 15;
@@ -115,6 +115,12 @@ function verificaColisaoBorda(){
      yBolinha - raio < 0){
     velocidadeYBolinha *= -1;
   }
+  if (yRaquete > 400) {
+    yRaquete = 1
+  }
+  if (yRaquete < -10){
+    yRaquete = 399
+  }
 }
 
 function mostraRaquete(x,y){
@@ -191,8 +197,8 @@ function marcaPonto(){
 }
 
 function bolinhaNaoFicaPresa(){
-    if (xBolinha - raio < 3){
-      xBolinha = 15
+    if (xBolinha - raio < 0){
+      xBolinha = 23
     }
     if (xBolinha + raio > 599){
       xBolinha = 582
