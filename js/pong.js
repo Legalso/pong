@@ -191,11 +191,10 @@ function marcaPonto(){
 }
 
 function bolinhaNaoFicaPresa(){
-    if (xBolinha - raio < 0){
-      xBolinha = 23
+    if (xBolinha - raio < 3){
+      xBolinha = 15
     }
-    if (xBolinha + raio > 600){
-      xBolinha = 580
+    if (xBolinha + raio > 599){
+      xBolinha = 582
     }
 }
-

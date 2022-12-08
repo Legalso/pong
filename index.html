@@ -1,5 +1,6 @@
 <!--  
-Esse código usa a biblioteca P5.js, suas funções predefinidas e seu plano cartesiano integrado. Para usar isso para importar a biblioteca (depois de baixar ela):
+Esse código usa a biblioteca P5.js, suas funções predefinidas e seu plano cartesiano integrado, p5.collide2d.js para as colisões e p5.sound.min.js para a trilha sonora. 
+Para usar isso, é necessário importar a biblioteca (depois de baixar ela):
 https://editor.p5js.org/Legalso/sketches/bGwgWDqxu
 Site do jogo funcionando pelo GitHub pages:
 https://legalso.github.io/Pong/
@@ -9,17 +10,28 @@ https://legalso.github.io/Pong/
 <html lang="pt_BR">
 <html>
 <head>
+  <div id="sketch-holder">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PONG</title>
+  <h1 class="info">PONG</h1>
+  <h3>Remake do jogo clássico de 1972</h3>
   <script src="js/p5.js"></script>
   <script src="js/p5.collide2d.js"></script>
   <script src="js/p5.sound.min.js"></script>
   <script src="js/pong.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet"  href="css/style.css">
   <meta charset="utf-8" />
+  </div>
 </head>
 <body>
+  <div id ="text">
+  <h2 class="info">
+    ⬆ / W - Sobe a raquete</h2>
+  <h2 class="info">
+    ⬇ / S - Desce a raquete</h2>
+  <h3 class="info">F5 - recomeça o jogo</h3>
+</div>
 </body>
 </html>
