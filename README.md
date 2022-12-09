@@ -7,4 +7,4 @@ Criado com base nas videoaulas do curso de Lógica de Programação da Alura, po
 
 Link do jogo: https://legalso.github.io/Pong/
 
-Versão Multiplayer (local): https://github.com/Legalso/Pong-Multiplayer
+Versão Multiplayer (local): https://legalso.github.io/Pong-Multiplayer/
